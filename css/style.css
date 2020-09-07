@@ -1,0 +1,803 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Globlaes */
+
+h1 {
+    font-size: 3rem;
+    text-shadow: .5rem .5rem .5rem rgba(21, 46, 78, 0.431);
+}
+
+h2 {
+    font-size: 2.7rem;
+    text-shadow: .5rem .5rem .5rem rgba(21, 46, 78, 0.431);
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* utilidades */
+
+.btn-primario {
+    background-color: rgb(21, 46, 78);
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 2rem 3rem;
+    text-align: center;
+    transition: all .5s;
+}
+
+.btn-primario:hover,
+.btn-primario:active {
+    background-color: #fff;
+    border: 1px solid rgb(21, 46, 78);
+    color: rgb(21, 46, 78);
+    text-align: center;
+}
+
+.btn-secundario {
+    background-color: #fff;
+    border: 1px solid rgb(21, 46, 78);
+    color: rgb(21, 46, 78);
+    padding: 2rem 3rem;
+    text-align: center;
+    transition: all .5s;
+}
+
+.btn-secundario:hover,
+.btn-secundario:active {
+    background-color: rgb(21, 46, 78);
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 2rem 3rem;
+    text-align: center;
+}
+
+main h2 {
+    color: rgb(21, 46, 78);
+    font-size: 3.5rem;
+    margin: 5rem 0 0 0;
+    text-align: center;
+    text-shadow: .5rem .5rem .5rem rgba(21, 46, 78, 0.431);
+    text-transform: uppercase;
+}
+
+
+/* ================== Header ====================== */
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-image: url(../img/hero.jpg);
+    background-position: -10rem center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    max-width: 100%;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    header {
+        background-position: -17rem center;
+    }
+}
+
+@media (min-width: 992px) {
+    header {
+        background-position: center center;
+    }
+}
+
+header .barra {
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 100%;
+    padding: 1.6rem;
+    max-height: 20rem;
+}
+
+header .barra .logo {
+    flex-basis: 20%;
+}
+
+header .barra .logo h2 {
+    color: rgb(21, 46, 78);
+    font-weight: normal;
+    text-transform: uppercase;
+    transition: all 1s;
+}
+
+header .barra .logo h2 span {
+    font-weight: bolder;
+    transition: 1s all;
+}
+
+header .barra .logo h2:hover {
+    transform: perspective(170rem) scale(1.3) translateX(17%) rotateY(30deg);
+}
+
+header .barra .logo h2 span:hover {
+    color: rgba(202, 200, 200, 0.74);
+}
+
+header .barra nav {
+    opacity: 0;
+    max-height: 0;
+    flex-basis: 100%;
+    z-index: -1;
+}
+
+header .menu-movil {
+    flex-basis: 55%;
+    font-size: 4rem;
+    justify-self: flex-end;
+    margin: 0 2rem 0 auto;
+    text-align: right;
+}
+
+header .menu-movil span {
+    border: 1px solid rgb(21, 46, 78);
+    color: rgb(21, 46, 78);
+    padding: .5rem;
+}
+
+@media (min-width: 992px) {
+    header .barra nav {
+        display: flex;
+        justify-content: space-around;
+        flex-basis: 59%;
+        max-height: 20rem;
+        opacity: 1;
+        z-index: 1;
+    }
+    header .menu-movil {
+        display: none;
+    }
+}
+
+header .barra nav a {
+    border: 1px solid rgb(21, 46, 78);
+    display: block;
+    border-radius: .5rem;
+    color: rgb(21, 46, 78);
+    font-size: 1.6rem;
+    padding: 3rem 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all .7s;
+}
+
+@media (min-width: 992px) {
+    header .barra nav a {
+        border: none;
+        display: inline-block;
+        padding: 1rem 2rem;
+    }
+}
+
+header .barra nav a:last-of-type {
+    border: 1px solid rgb(21, 46, 78);
+}
+
+header .barra nav a:hover {
+    background-color: rgb(21, 46, 78, .7);
+    color: rgba(255, 255, 255, 1);
+}
+
+header .telefonos {
+    max-width: 77%;
+    margin: 0 auto;
+    background-color: rgb(21, 46, 78);
+    padding: 1.4rem .4rem;
+}
+
+header .telefonos p {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    header .telefonos {
+        align-self: flex-end;
+        background-color: rgb(21, 46, 78);
+        margin: 0 7rem 0 0;
+        padding: 1.2rem .7rem 7rem .7rem;
+    }
+}
+
+.texto-fondo-header {
+    background-color: rgb(21, 46, 78);
+    max-width: 100%;
+    color: white;
+    padding: 1.3rem;
+}
+
+.texto-fondo-header h3 {
+    font-size: 3.4rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 1rem 0;
+    text-transform: uppercase;
+    text-shadow: .5rem .5rem .5rem rgba(255, 255, 255, 0.431);
+}
+
+.texto-fondo-header p {
+    font-size: 2.4rem;
+    line-height: 1.4;
+    margin: 1rem 0;
+}
+
+.texto-fondo-header hr {
+    background-color: #fff;
+    padding: .1rem;
+}
+
+.texto-fondo-header .precio {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.texto-fondo-header .btn-primario {
+    display: block;
+    width: 100%;
+    margin: 3rem auto 0 auto;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+    .texto-fondo-header {
+        padding: 4rem 7rem;
+        text-align: left;
+    }
+    .texto-fondo-header h3 {
+        margin-top: 2rem;
+    }
+    .texto-fondo-header p {
+        margin: 2rem 0;
+    }
+    .texto-fondo-header .btn-primario {
+        width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .texto-fondo-header {
+        background-color: rgba(9, 41, 80, .7);
+        margin: -30rem 0 0 10rem;
+        padding: 2.5rem;
+        position: relative;
+        width: 30%;
+    }
+    .texto-fondo-header h3 {
+        font-size: 2.7rem;
+    }
+    .texto-fondo-header p {
+        font-size: 2rem;
+    }
+}
+
+
+/* ================== MAIN SECTION ULTIMAS PROPIEDADES ====================== */
+
+main .container {
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+main .container .ultimas-propiedades {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.ultimas-propiedades .propiedad {
+    border: 1px solid rgb(21, 46, 78);
+    flex-basis: 100%;
+    margin: 2rem 0;
+    padding: 1rem;
+    text-align: left;
+}
+
+.ultimas-propiedades .propiedad .img-propiedad {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.ultimas-propiedades .propiedad img {
+    max-width: 100%;
+    object-fit: cover;
+    margin-bottom: 2rem;
+}
+
+.ultimas-propiedades h3 {
+    color: rgb(87, 117, 156);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.ultimas-propiedades .precio-propiedad {
+    color: rgb(87, 117, 156);
+    font-size: 2.1rem;
+    margin-bottom: 1rem;
+}
+
+.ultimas-propiedades .detalle-propiedad {
+    color: rgb(190, 173, 96);
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+}
+
+.ultimas-propiedades .descripcion-propiedad {
+    color: #666565d7;
+    font-size: 1.9rem;
+}
+
+.ultimas-propiedades .propiedad .btn-secundario {
+    display: block;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    justify-self: flex-end;
+}
+
+@media (min-width: 768px) {
+    main .container .ultimas-propiedades {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .ultimas-propiedades .propiedad {
+        flex-basis: calc(50% - 1rem);
+    }
+    .ultimas-propiedades .propiedad:last-of-type {
+        flex-basis: calc(100%);
+    }
+}
+
+@media (min-width: 992px) {
+    .ultimas-propiedades .propiedad {
+        flex-basis: calc(33% - 1rem);
+    }
+    .ultimas-propiedades .propiedad:last-of-type {
+        flex-basis: calc(33%);
+    }
+}
+
+
+/* ================== MAIN SECTION ALQUILER PROPIEDADES ====================== */
+
+.alquiler-propiedades {
+    background-color: rgb(21, 46, 78);
+    margin-top: 7rem;
+}
+
+.alquiler-propiedades:last-of-type {
+    margin-top: 0;
+}
+
+.alquiler-propiedades .contenido-alquiler {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 7rem;
+}
+
+.alquiler-propiedades .contenido-alquiler .img-alquiler {
+    width: 100%;
+}
+
+.alquiler-propiedades .img-alquiler img {
+    max-width: 100%;
+}
+
+#alquiler-1 .contenido-alquiler .img-alquiler {
+    margin-top: -12rem;
+}
+
+#alquiler-2 {
+    background-color: rgb(25, 53, 90);
+    padding-top: 5rem;
+}
+
+.alquiler-propiedades .texto-alquiler {
+    color: #fff;
+    padding: 2.5rem;
+    width: 100%;
+}
+
+.alquiler-propiedades .contenido-alquiler .texto-alquiler h3 {
+    font-size: 3.4rem;
+}
+
+.contenido-alquiler .texto-alquiler h5 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 1rem 0;
+    color: rgb(190, 173, 96);
+}
+
+.contenido-alquiler .texto-alquiler p {
+    font-size: 1.7rem;
+    line-height: 1.2;
+}
+
+.contenido-alquiler .texto-alquiler .precio-alquiler {
+    color: rgb(87, 117, 156);
+    margin-top: 3rem;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+@media (min-width: 992px) {
+    .alquiler-propiedades .contenido-alquiler {
+        flex-direction: row;
+    }
+    .alquiler-propiedades .contenido-alquiler .img-alquiler {
+        width: 30%;
+    }
+    .alquiler-propiedades .contenido-alquiler .texto-alquiler {
+        width: 40%;
+    }
+    #alquiler-2 .contenido-alquiler {
+        flex-direction: row-reverse;
+    }
+}
+
+
+/* ================== SECTION CONFIANZA ====================== */
+
+.confiar {
+    padding: 4.3rem;
+}
+
+.confiar .valores {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 90%;
+}
+
+.confiar .valores .valor {
+    margin: 2rem 1rem;
+    padding: 1.3rem;
+    text-align: center;
+}
+
+.confiar .valores .valor span {
+    color: rgba(190, 173, 96, 0.582);
+    font-size: 5rem;
+    margin: 2.5rem 0;
+}
+
+.confiar .valores .valor h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.confiar .valores .valor p {
+    color: rgba(202, 200, 200, 0.74);
+    font-size: 1.7rem;
+}
+
+@media (min-width: 768px) {
+    .confiar .valores {
+        flex-direction: row;
+    }
+    .confiar .valores .valor:first-of-type {
+        order: 0;
+    }
+    .confiar .valores .valor:nth-child(2) {
+        order: 2;
+    }
+    .confiar .valores .valor:last-of-type {
+        order: 1;
+    }
+    .confiar .valores .valor h3 {
+        margin-bottom: 2.9rem;
+    }
+}
+
+
+/* ================== SECTION TESTIMONIALS ====================== */
+
+.testimonials {
+    background-attachment: fixed;
+    background-image: url(../img/diseño\ interior.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem 1rem;
+    position: relative;
+    z-index: 0;
+}
+
+.testimonials:after {
+    content: '';
+    background-color: rgba(0, 0, 0, .4);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+
+.testimonials h2 {
+    color: #fff;
+    position: relative;
+    text-shadow: .5rem .5rem .5rem rgba(202, 200, 200, 0.74);
+    z-index: 2;
+}
+
+.testimonials .testimonios {
+    position: relative;
+    z-index: 2;
+}
+
+.testimonials .testimonios .testimonio {
+    margin-top: 2rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.testimonials .testimonios .testimonio span {
+    color: rgba(240, 200, 0, 0.664);
+    font-size: 2rem;
+    margin-bottom: 1.6rem;
+}
+
+.testimonios .testimonio p {
+    color: rgba(255, 255, 255, 1);
+    font-size: 1.7rem;
+    line-height: 1.2;
+    margin-bottom: 1.6rem;
+}
+
+.testimonios .testimonio h5 {
+    color: rgba(240, 200, 0, 0.664);
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1.6rem;
+}
+
+@media (min-width: 768px) {
+    .testimonials .testimonios {
+        display: flex;
+    }
+}
+
+
+/* ================== SECTION CONTACTO ====================== */
+
+.contacto {
+    padding: 0 1.4rem;
+}
+
+.contacto h3 {
+    color: rgb(21, 46, 78);
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.contacto .direccion {
+    margin-top: 3rem;
+    padding: 1rem;
+}
+
+.contacto .direccion p {
+    color: rgba(97, 93, 93, 0.74);
+    font-size: 1.7rem;
+    line-height: 1.3;
+}
+
+.contacto .direccion iframe {
+    margin: 2rem 0;
+    max-width: 100%;
+}
+
+.contacto .form {
+    margin-top: 3rem;
+    width: 100%;
+}
+
+.contacto .form form {
+    padding: 1rem 0;
+}
+
+.form form input {
+    display: block;
+    font-size: 1.6rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    width: 100%;
+}
+
+.form form textarea {
+    display: block;
+    font-size: 1.6rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    height: 20rem;
+    width: 100%;
+}
+
+.form form input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .contacto {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .contacto h2 {
+        flex-basis: 100%;
+    }
+    .contacto .direccion {
+        flex-basis: calc(40% - 1rem);
+    }
+    .contacto .form {
+        flex-basis: calc(40% - 1rem);
+    }
+}
+
+.contacto .agente {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.contacto .agente p {
+    color: rgba(97, 93, 93, 0.74);
+    font-size: 1.7rem;
+    line-height: 1.3;
+}
+
+@media (min-width: 768px) {
+    .contacto .agente {
+        flex-basis: 30%;
+        margin: 0 55% 0 0;
+    }
+}
+
+
+/* =================================FOOTER========================== */
+
+footer {
+    align-items: flex-start;
+    background-color: rgb(190, 173, 96);
+    color: white;
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+    padding: 3rem;
+}
+
+footer span {
+    margin: 0 .5rem;
+    font-size: 2.5rem;
+    transition: all 1s;
+}
+
+footer span:first-of-type {
+    margin-left: 2rem;
+}
+
+footer span:hover {
+    cursor: pointer;
+    color: rgb(21, 46, 78);
+    transform: scale(1.3);
+}
+
+
+/* Flehca para arriba */
+
+.flecha {
+    opacity: 0;
+    background-color: #000;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 4rem;
+    position: fixed;
+    bottom: 2%;
+    right: 5%;
+    cursor: pointer;
+}
+
+
+/* ============================= PÁGINAS INTERNAS ======================= */
+
+#header-interna {
+    background-image: none;
+    height: auto;
+    padding: 1rem 2rem;
+}
+
+.nuestros-agentes {
+    background-color: rgb(21, 46, 78);
+    padding: 3rem;
+}
+
+.nuestros-agentes h2 {
+    color: white;
+    text-shadow: .5rem .5rem .5rem rgba(255, 255, 255, .7);
+}
+
+.nuestros-agentes .agentes {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 3rem auto 0 auto;
+    width: 90%;
+}
+
+@media (min-width: 992px) {
+    .nuestros-agentes .agentes {
+        flex-direction: row;
+    }
+}
+
+.nuestros-agentes .agentes .agente {
+    flex-basis: calc(33% - .1rem);
+    padding: 1rem;
+    margin-bottom: 3rem;
+}
+
+.nuestros-agentes .agentes .agente .img-agente {
+    width: 100%;
+}
+
+.agente .img-agente img {
+    height: 340px;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.agente .texto-agente {}
+
+.agente .texto-agente h3 {
+    color: rgb(87, 117, 156);
+    font-size: 3rem;
+    margin-top: 2rem;
+    text-transform: uppercase;
+}
+
+.agente .texto-agente h5 {
+    color: rgba(190, 173, 96, 0.582);
+    font-size: 2.5rem;
+    margin: 2rem 0;
+    text-shadow: .5rem .5rem .5rem rgba(190, 173, 96, 0.383);
+}
+
+.agente .texto-agente p {
+    color: rgba(255, 255, 255, .7);
+    font-size: 2rem;
+    line-height: 1.4;
+}
